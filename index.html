@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
       <!-- greensock -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 </head>
+
 <body>
 
       <div class="overlay">
@@ -29,13 +31,13 @@
       </div>
 
       <div class="wrapper">
-            <div class="logo">escape</div>
+            <div class="logo"><img src="./icon.jpg" alt="" style="width: 70px; border-radius: 20% ;"></div>
             <div class="nav">
                   <ul>
                         <li>Home</li>
                         <li>Nuestra tienda</li>
                         <li>Contáctanos</li>
-                        <li>Search</li>
+                        <li>Preguntas Frecuentes</li>
                   </ul>
             </div>
             <div class="social-media">
@@ -49,24 +51,32 @@
                   <span>Seguridad a </br>agricultores mexicanos</span>
             </div>
             <div class="header">
-                  <h1>La nueva forma de cuidar tus cultivos </br><span style="font-size: 80;">Agro-Sense</span></h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni excepturi, maxime, quasi harum dolorum facilis iusto in odio placeat expedita maiores aspernatur delectus. Id et, quos ab illo laboriosam reiciendis?</p>
-                  <button>EXPLORE</button>
+                  <h1>La nueva forma de cuidar tus cultivos </br><span
+                              style="font-size: 100px; color: #2E7D32;">Agro-Sense</span></h1>
+                  <p>Seguridad y crecimiento para tus cultivos, al alcance de tu bolsillo.
+                  </p>
+                  <button>MÁS INFORMACIÓN</button>
             </div>
             <div class="bottom-bar">
                   <div class="container">
                         <div class="row">
                               <div class="col-lg-4">
-                                    <h6>Lorem ipsum dolor sit.</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veniam labore repellendus necessitatibus ipsa!</p>
+                                    <h6>Misión</h6>
+                                    <p>Satisfacer las necesidades de los agricultores a través de la implementación de
+                                          la tecnología.
+                                    </p>
                               </div>
                               <div class="col-lg-4">
-                                    <h6>Lorem ipsum dolor sit.</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veniam labore repellendus necessitatibus ipsa!</p>
+                                    <h6>Visión</h6>
+                                    <p>2025: Ser una aplicación reconocida a nivel nacional y con una gran cantidad de
+                                          usuarios para ampliar y enriquecer la comunidad de agricultores.
+                                    </p>
                               </div>
                               <div class="col-lg-4">
-                                    <h6>Lorem ipsum dolor sit.</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque veniam labore repellendus necessitatibus ipsa!</p>
+                                    <h6>Justificación</h6>
+                                    <p>Somos una empresa que quiere darle seguridad, confianza y las herramientas a los
+                                          agricultores para que sus cultivos prosperen al 100%.
+                                    </p>
                               </div>
                         </div>
                   </div>
@@ -74,82 +84,88 @@
       </div>
 
       <script type="text/javascript">
+            TweenMax.to(".overlay h1", 2, {
+                  opacity: 0,
+                  y: -60,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.to(".overlay h1", 2, {
-            opacity: 0,
-            y: -60,
-            ease: Expo.easeInOut
-      })
+            TweenMax.to(".overlay", 2, {
+                  delay: 1,
+                  top: "-100%",
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.to(".overlay", 2, {
-            delay: 1,
-            top: "-100%",
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".logo", 1, {
+                  delay: 2.4,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".logo", 1, {
-            delay: 2.4,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
+            TweenMax.staggerFrom(".nav ul li", 1, {
+                  delay: 2.4,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            }, 0.2)
 
-      TweenMax.staggerFrom(".nav ul li", 1, {
-            delay: 2.4, opacity: 0, y: 20, ease: Expo.easeInOut
-      }, 0.2)
+            TweenMax.staggerFrom(".social-media ul li", 1, {
+                  delay: 2.4,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            }, 0.2)
 
-      TweenMax.staggerFrom(".social-media ul li", 1, {
-            delay: 2.4, opacity: 0, y: 20, ease: Expo.easeInOut
-      }, 0.2)
+            TweenMax.from(".side-strip", 2, {
+                  delay: 2.4,
+                  opacity: 0,
+                  y: 40,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".side-strip", 2, {
-            delay: 2.4,
-            opacity: 0,
-            y: 40,
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".row", 2, {
+                  delay: 2.4,
+                  opacity: 0,
+                  x: 40,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".row", 2, {
-            delay: 2.4,
-            opacity: 0,
-            x: 40,
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".row h6", 2, {
+                  delay: 3,
+                  opacity: 0,
+                  y: 40,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".row h6", 2, {
-            delay: 3,
-            opacity: 0,
-            y: 40,
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".row p", 2, {
+                  delay: 3.2,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".row p", 2, {
-            delay: 3.2,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".header h1", 2, {
+                  delay: 3.2,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".header h1", 2, {
-            delay: 3.2,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".header p", 2, {
+                  delay: 3.4,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            })
 
-      TweenMax.from(".header p", 2, {
-            delay: 3.4,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
-
-      TweenMax.from(".header button", 2, {
-            delay: 3.6,
-            opacity: 0,
-            y: 20,
-            ease: Expo.easeInOut
-      })
+            TweenMax.from(".header button", 2, {
+                  delay: 3.6,
+                  opacity: 0,
+                  y: 20,
+                  ease: Expo.easeInOut
+            })
       </script>
 </body>
+
 </html>
